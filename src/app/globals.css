@@ -10,7 +10,7 @@
 
 @layer base {
 	* {
-		background-color: theme("colors.pipboyBackground");
+		/* background-color: theme("colors.pipboyBackground"); */
 		color: theme("colors.pipboyGreen");
 	}
 
