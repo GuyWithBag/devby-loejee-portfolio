@@ -15,7 +15,7 @@ const Home = () => {
 						height={600}
 						width={600}
 						src={"/images/profile_pic.jpg"}
-						className=" object-cover self-center "
+						className=" object-cover "
 					/>
 					<p className="text-center">
 						I am a flexible programmer learner capable of learning and adapating
