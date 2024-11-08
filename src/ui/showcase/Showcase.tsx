@@ -4,6 +4,7 @@ import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
 import React, { useState } from "react";
 import GooglePlayButton from "@/components/google-play-button/GooglePlayButton";
+import Image from "next/image";
 
 const Showcase = () => {
 	const [tabIndex, setTabIndex] = useState<number>(0);
@@ -25,7 +26,15 @@ const Showcase = () => {
 					display until it destroys your enemies! <br />
 				</p>
 			),
-			images: [],
+			images: [
+				"/images/portfolioImages/chainReactionGame/gameplay.png",
+				"/images/portfolioImages/chainReactionGame/main_menu.png",
+				"/images/portfolioImages/chainReactionGame/maps_2.png",
+				"/images/portfolioImages/chainReactionGame/maps.png",
+				"/images/portfolioImages/chainReactionGame/multiple_players_1.png",
+				"/images/portfolioImages/chainReactionGame/multiple_players_2.png",
+				"/images/portfolioImages/chainReactionGame/victory.png",
+			],
 			actions: (
 				<>
 					<GooglePlayButton href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.ChainReactionAtomRevampedSupreme" />
@@ -52,7 +61,15 @@ const Showcase = () => {
 					</p>
 				</p>
 			),
-			images: [],
+			images: [
+				"/images/portfolioImages/eCommerceApp/home_page_2.png",
+				"/images/portfolioImages/eCommerceApp/home_page_dark_mode.png",
+				"/images/portfolioImages/eCommerceApp/home_page.png",
+				"/images/portfolioImages/eCommerceApp/product.png",
+				"/images/portfolioImages/eCommerceApp/shopping_cart.png",
+				"/images/portfolioImages/eCommerceApp/shopping_cart_2.png",
+				"/images/portfolioImages/eCommerceApp/wish_list.png",
+			],
 			actions: <></>,
 		},
 		{
@@ -118,7 +135,13 @@ const Showcase = () => {
 	];
 	return (
 		<div className="flex flex-row w-full min-h-screen justify-evenly items-center px-24">
-			<section className=" flex-grow flex justify-center max-w-[50%] flex-col">
+			<section className=" flex-grow flex justify-center max-w-[50%] flex-col p-10">
+				<Image
+					width={1000}
+					height={1000}
+					src={pages[tabIndex].images[0]}
+					alt="poop"
+				/>
 				{pages[tabIndex].name}
 				<div className="flex flex-row justify-between">
 					<button
@@ -138,7 +161,7 @@ const Showcase = () => {
 				</div>
 			</section>
 			<div className="border-r-2 h-[80vh] border-pipboyDarkGreen" />
-			<section className="flex-grow flex flex-col justify-center max-w-[50%] gap-4">
+			<section className="flex-grow flex flex-col justify-center max-w-[50%] gap-4 p-10">
 				<div>{pages[tabIndex].content}</div>
 				<div>{pages[tabIndex].actions}</div>
 			</section>

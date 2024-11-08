@@ -1,6 +1,6 @@
 type ShowcasePage = {
     name: string, 
     content: React.ReactNode,
-    images?: string[], 
+    images: string[], 
     actions?: React.ReactNode
 }

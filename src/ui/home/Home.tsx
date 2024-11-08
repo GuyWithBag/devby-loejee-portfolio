@@ -8,7 +8,7 @@ import Carousel from "react-multi-carousel";
 const Home = () => {
 	return (
 		<div className="flex flex-row w-full min-h-screen justify-evenly items-center">
-			<section className=" flex-grow flex justify-center max-w-[50%]">
+			<section className=" flex-grow flex justify-center max-w-[50%] p-10">
 				<div className="flex flex-col justify-evenly items-stretch max-w-96 gap-4">
 					<Image
 						alt="Profile Picture"
@@ -30,7 +30,7 @@ const Home = () => {
 				</div>
 			</section>
 			<div className="border-r-2 h-[80vh] border-pipboyDarkGreen" />
-			<section className="flex-grow flex justify-center max-w-[50%]">
+			<section className="flex-grow flex justify-center max-w-[50%] p-10">
 				<SkillsShowcase />
 				{/* <div>asdasd</div> */}
 				{/* asdasd */}
