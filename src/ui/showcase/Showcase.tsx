@@ -8,6 +8,7 @@ import Image from "next/image";
 
 const Showcase = () => {
 	const [tabIndex, setTabIndex] = useState<number>(0);
+	const [carouselIndex, setCarouselIndex] = useState<number>(0);
 
 	const pages: ShowcasePage[] = [
 		{
@@ -135,15 +136,24 @@ const Showcase = () => {
 	];
 	return (
 		<div className="flex flex-row w-full min-h-screen justify-evenly items-center px-24">
-			<section className=" flex-grow flex justify-center max-w-[50%] flex-col p-10">
-				<Image
-					width={1000}
-					height={1000}
-					src={pages[tabIndex].images[0]}
-					alt="poop"
-				/>
-				{pages[tabIndex].name}
-				<div className="flex flex-row justify-between">
+			<section className=" flex-grow flex justify-center items-center gap-6  max-w-[50%] flex-col p-10">
+				<div className="h-72 max-w-[35rem] border-4 border-pipboyGreen overflow-hidden ">
+					<div className="transition-all h-full flex flex-row -translate-x-[0] gap-1">
+						{pages[tabIndex].images.map((value) => {
+							return (
+								<Image
+									width={1000}
+									height={1000}
+									src={value}
+									alt="poop"
+									className=" h-full object-contain  "
+								/>
+							);
+						})}
+					</div>
+				</div>
+
+				<div className="flex flex-row justify-between w-full max-w-96">
 					<button
 						onClick={() => {
 							setTabIndex(tabIndex - 1);
@@ -151,6 +161,7 @@ const Showcase = () => {
 					>
 						<FaCaretLeft />
 					</button>
+					<p className="">{pages[tabIndex].name}</p>
 					<button
 						onClick={() => {
 							setTabIndex(tabIndex + 1);
