@@ -1,9 +1,30 @@
+import { VariantProps, cva } from "class-variance-authority";
 import React from "react";
 
-const AbsoluteBottomBorder = () => {
+export const AbsoluteBottomBorderVariants = cva(
+	["border-b-2 border-pipboyGreen "],
+	{
+		variants: {
+			width: {
+				full: "w-full",
+				"90%": "w-[90%]",
+			},
+		},
+		defaultVariants: {
+			width: "full",
+		},
+	}
+);
+
+interface AbsoluteBottomBorderProps
+	extends VariantProps<typeof AbsoluteBottomBorderVariants> {}
+
+const AbsoluteBottomBorder: React.FC<AbsoluteBottomBorderProps> = ({
+	width,
+}) => {
 	return (
 		<div className="w-full absolute bottom-0 flex justify-center items-center">
-			<div className="border-b-2 border-pipboyGreen w-[90%]" />
+			<div className={AbsoluteBottomBorderVariants({ width })} />
 		</div>
 	);
 };

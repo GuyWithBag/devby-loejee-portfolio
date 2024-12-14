@@ -1,4 +1,4 @@
-import Page from "@/components/Page/Page";
+import Page from "@/components/page/Page";
 import Home from "@/ui/home/Home";
 import Image from "next/image";
 

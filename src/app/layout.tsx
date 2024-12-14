@@ -3,8 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
-import Appbar from "@/components/Appbar/Appbar";
+import Appbar from "@/components/appbar/Appbar";
 import AnimatePageProvider from "@/providers/AnimatePageProvider";
+import FakePage from "@/components/fake-page/FakePage";
 
 const inter = Inter({ subsets: ["latin"] });
 

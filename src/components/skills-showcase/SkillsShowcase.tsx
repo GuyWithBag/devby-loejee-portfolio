@@ -22,6 +22,7 @@ import { FaJava } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
 import { TbBrandCpp } from "react-icons/tb";
 import Tooltip from "../tooltip/Tooltip";
+import { motion } from "framer-motion";
 
 const SkillsShowcase = () => {
 	const keys: TabBarKey[] = [
@@ -46,7 +47,7 @@ const SkillsShowcase = () => {
 		{ name: "TailwindCSS", icon: <SiTailwindcss className="w-full h-full" /> },
 		{ name: "NextJS", icon: <RiNextjsFill className="w-full h-full" /> },
 		{ name: "Godot", icon: <SiGodotengine className="w-full h-full" /> },
-		{ name: "Svelte", icon: <SiGodotengine className="w-full h-full" /> },
+		{ name: "Svelte", icon: <RiSvelteFill className="w-full h-full" /> },
 	];
 
 	const technologies: Icon[] = [
@@ -107,16 +108,20 @@ const SkillsShowcase = () => {
 
 	// return <div className="">asdasdss</div>;
 	return (
-		<div className="flex flex-col max-w-[30rem] w-full ">
+		<div className="flex flex-col max-w-96 h-52 w-full gap-2 ">
 			<TabBar keys={keys} onChange={onTabBarChange} />
-			<div className="flex flex-wrap gap-4">
-				{getSkills(currentKey.value ?? currentKey.name).map((value, index) => {
+			<div className="flex flex-wrap gap-4 mt-3">
+				{getSkills(currentKey.value ?? currentKey.name).map((value) => {
 					// console.log("\n");
 					// console.log("PENISSSSSS\n\n");
 					// console.log(currentKey);
 					if (typeof value.icon === "string") {
 						return (
-							<div className="relative w-10 h-10 ">
+							<motion.div
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								className="relative w-10 h-10 "
+							>
 								{tooltipKey === value.name ? (
 									<Tooltip content={value.name} />
 								) : (
@@ -131,11 +136,16 @@ const SkillsShowcase = () => {
 									width={200}
 									className="object-contain oolor-pipboyGreen w-full h-full"
 								/>
-							</div>
+							</motion.div>
 						);
 					}
 					return (
-						<div key={value.name} className="w-10 h-10 relative">
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							key={value.name}
+							className="w-10 h-10 relative"
+						>
 							{tooltipKey === value.name ? (
 								<Tooltip content={value.name} />
 							) : (
@@ -148,7 +158,7 @@ const SkillsShowcase = () => {
 							>
 								{value.icon}
 							</div>
-						</div>
+						</motion.div>
 					);
 					// return <div>ASSSSSSSSSSSSSSS</div>;
 				})}

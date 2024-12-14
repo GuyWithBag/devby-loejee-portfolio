@@ -10,7 +10,7 @@ interface TabBarProps {
 
 const TabBar: React.FC<TabBarProps> = ({ keys, onChange }) => {
 	return (
-		<div className="flex flex-wrap justify-between">
+		<div className="flex flex-wrap justify-between relative">
 			<AbsoluteBottomBorder />
 			{keys.map((value, index) => {
 				return (
