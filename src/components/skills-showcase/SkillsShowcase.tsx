@@ -110,7 +110,7 @@ const SkillsShowcase = () => {
 	return (
 		<div className="flex flex-col max-w-96 h-52 w-full gap-2 ">
 			<TabBar keys={keys} onChange={onTabBarChange} />
-			<div className="flex flex-wrap gap-4">
+			<div className="flex flex-wrap gap-4 mt-3">
 				{getSkills(currentKey.value ?? currentKey.name).map((value) => {
 					// console.log("\n");
 					// console.log("PENISSSSSS\n\n");

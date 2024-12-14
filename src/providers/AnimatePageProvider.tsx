@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 interface AnimatePageProviderProps
@@ -15,6 +15,9 @@ const AnimatePageProvider: React.FC<AnimatePageProviderProps> = ({
 		<AnimatePresence mode="wait">
 			<motion.div
 				key={usePathname()}
+				className={`${
+					children === undefined || children === null ? "hidden" : ""
+				}`}
 				initial="initialState"
 				animate="animateState"
 				exit="exitState"

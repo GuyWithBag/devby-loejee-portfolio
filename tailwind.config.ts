@@ -13,6 +13,16 @@ const config: Config = {
   theme: {
     
     extend: {
+      keyframes: {
+        rotateY: {
+          '100%': { transform: 'rotateX(0deg)' },
+          '0%': { transform: 'rotateX(360deg)' },
+        },
+        
+      },
+      animation: {
+        rotateY: 'rotateY 2s linear infinite', // Duration: 2s, infinite loop
+      },
       colors: {
         // Pip-Boy Style Colors
         pipboyBackground: '#0f0e17',

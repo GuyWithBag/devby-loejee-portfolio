@@ -5,6 +5,7 @@ import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import Appbar from "@/components/appbar/Appbar";
 import AnimatePageProvider from "@/providers/AnimatePageProvider";
+import FakePage from "@/components/fake-page/FakePage";
 
 const inter = Inter({ subsets: ["latin"] });
 

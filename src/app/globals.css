@@ -7,11 +7,17 @@
 		@apply pipboyBackground;
 	}
 } */
-
 @layer base {
 	* {
 		/* background-color: theme("colors.pipboyBackground"); */
+		box-sizing: border-box;
 		color: theme("colors.pipboyGreen");
+	}
+
+	ul,
+	ol {
+		list-style: disc;
+		padding-left: 2rem;
 	}
 
 	h1 {
@@ -22,9 +28,11 @@
 	}
 	h3 {
 		font-size: theme("fontSize.headlineSmall");
+		font-weight: 700;
 	}
 	h4 {
 		font-size: theme("fontSize.titleLarge");
+		font-weight: 500;
 	}
 	h5 {
 		font-size: theme("fontSize.titleMedium");
