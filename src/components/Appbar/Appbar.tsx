@@ -66,15 +66,15 @@ const Appbar = () => {
 									<div />
 								)}
 								<div
-									className={`absolute -right-6 bottom-1/2 ${
+									className={`absolute -right-6 max-md:-right-4 bottom-1/2  ${
 										path === value.path ? "" : "hidden"
 									}`}
 									style={{ transform: "scaleX(-1) translateY(50%)" }}
 								>
-									<FaPlay className="animate-rotateY" />
+									<FaPlay className="animate-rotateY max-md:w-3 max-md:h-3" />
 								</div>
 
-								<Link className={`p-2`} href={`${value.path}`}>
+								<Link className={`p-2 `} href={`${value.path}`}>
 									{value.name}
 								</Link>
 							</div>
