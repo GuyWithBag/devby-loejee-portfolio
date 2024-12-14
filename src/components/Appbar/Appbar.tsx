@@ -1,13 +1,12 @@
 "use client";
 
-import { Path } from "@/types/Path.type";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import AbsoluteBottomBorder from "../absolute-bottom-border/AbsoluteBottomBorder";
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
-import { transform } from "next/dist/build/swc";
+import { Path } from "@/types/path.type";
 
 // About me
 // Showcase
