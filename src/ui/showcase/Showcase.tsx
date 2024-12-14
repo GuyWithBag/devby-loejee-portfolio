@@ -78,34 +78,51 @@ const Showcase: React.FC<ShowcaseProps> = ({
 				<div className="flex flex-row justify-between w-full max-w-96">
 					<button
 						onClick={() => {
+							if (tabIndex - 1 < pages.length - 1) {
+								setTabIndex(pages.length - 1);
+								return;
+							}
 							setTabIndex(tabIndex - 1);
 						}}
 					>
 						<FaCaretLeft />
 					</button>
-					<p className=" font-medium">{pages[tabIndex].name}</p>
+					<a
+						href={pages[tabIndex].href}
+						className=" font-medium hover:text-pipboyYellow cursor-pointer"
+					>
+						{pages[tabIndex].name}
+					</a>
 					<button
 						onClick={() => {
+							if (tabIndex + 1 > pages.length - 1) {
+								setTabIndex(0);
+								return;
+							}
 							setTabIndex(tabIndex + 1);
 						}}
 					>
 						<FaCaretRight />
 					</button>
 				</div>
-				<div className="flex flex-row gap-2 left-1/2  z-10">
-					{pages[tabIndex].images.map((value, index) => {
-						return (
-							<button
-								className={`h-3 w-3  shadow-md bg-pipboyGreen rounded-full hover:bg-pipboyYellow transition-all hover:-translate-y-1 ${
-									carouselIndex == index ? "bg-pipboyDarkGreen" : ""
-								}`}
-								onClick={() => {
-									setCarouselIndex(index);
-								}}
-							/>
-						);
-					})}
-				</div>
+				{pages[tabIndex].images.length > 1 ? (
+					<div className="flex flex-row gap-2 left-1/2  z-10">
+						{pages[tabIndex].images.map((value, index) => {
+							return (
+								<button
+									className={`h-3 w-3  shadow-md bg-pipboyGreen rounded-full hover:bg-pipboyYellow transition-all hover:-translate-y-1 ${
+										carouselIndex == index ? "bg-pipboyDarkGreen" : ""
+									}`}
+									onClick={() => {
+										setCarouselIndex(index);
+									}}
+								/>
+							);
+						})}
+					</div>
+				) : (
+					<></>
+				)}
 			</section>
 			<div className="border-r-2 h-[80vh] border-pipboyDarkGreen max-md:hidden" />
 			<section className="flex-grow max-md:flex-grow-0 flex flex-col justify-center max-w-[50%] max-md:max-w-full gap-4 px-10 py-10 max-md:py-0 ">

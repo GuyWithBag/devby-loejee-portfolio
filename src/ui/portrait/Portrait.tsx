@@ -31,7 +31,7 @@ const Portrait = () => {
 					height={600}
 					width={600}
 					src={"/images/profile_pic.jpg"}
-					className=" object-cover border-2 border-pipboyGreen p-2 "
+					className=" object-cover border-2 border-pipboyGreen p-2 max-h-72 max-w-72 self-center "
 					onMouseOver={() => {
 						setShowFullscreenImage(true);
 						setFullscreenImage("/images/profile_pic.jpg");
@@ -46,6 +46,13 @@ const Portrait = () => {
 					very fast, game development and web development. With tools such as
 					Flutter, Godot Engine and Svelte
 				</p>
+				<a
+					className="self-center text-sm bg-pipboyGreen px-4 py-1 rounded-full text-pipboyBackground hover:text-pipboyBackground hover:bg-pipboyYellow text-center"
+					download
+					href="/LoejeeMiguel_Dulaugon_Resume.pdf"
+				>
+					Download Resume
+				</a>
 				<div className="flex flex-wrap justify-evenly items-stretch ">
 					<FaLinkedin />
 					<FaGithub />

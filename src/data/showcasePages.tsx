@@ -2,6 +2,26 @@ import GooglePlayButton from "@/components/google-play-button/GooglePlayButton";
 
 export const pages: ShowcasePage[] = [
 	{
+		name: "SAMAHAN All for more",
+		content: (
+			<div>
+				<h3>SAMAHAN All for more</h3>
+				<p>
+					Under SAMAHAN Systems Development, we have developed and designed an
+					official page for Ateneo's all student organization SAMAHAN
+				</p>
+				<br />
+				<p>
+					Hosted and deployed in Ateneo De Davao's official servers and domain.
+					Fully featured full stack website created using NextJs and NestJS.
+				</p>
+			</div>
+		),
+		images: ["/images/portfolioImages/samahanAllForMore/home_page.jpg"],
+		actions: <></>,
+		href: "https://samahan.addu.edu.ph",
+	},
+	{
 		name: "Chain Reaction: Atom Supreme Revamped",
 		content: (
 			<div>
@@ -36,8 +56,10 @@ export const pages: ShowcasePage[] = [
 			</>
 		),
 	},
+
 	{
 		name: "NextJS E-Commerce",
+		href: "https://e-commerce-app-flame.vercel.app/",
 		content: (
 			<div>
 				<h3>Responsive E-Commerce Website With Functionalities</h3>
