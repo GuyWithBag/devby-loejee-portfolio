@@ -109,7 +109,7 @@ const SkillsShowcase = () => {
 	// return <div className="">asdasdss</div>;
 	return (
 		<div className="flex flex-col max-w-96 h-52 w-full gap-2 ">
-			<TabBar keys={keys} onChange={onTabBarChange} />
+			<TabBar keys={keys} onChange={onTabBarChange} currentKey={currentKey} />
 			<div className="flex flex-wrap gap-4 mt-3">
 				{getSkills(currentKey.value ?? currentKey.name).map((value, index) => {
 					// console.log("\n");
@@ -137,6 +137,7 @@ const SkillsShowcase = () => {
 									width={200}
 									className="object-contain oolor-pipboyGreen w-full h-full"
 								/>
+								<div className="absolute inset-0 bg-green-500 opacity-100 mix-blend-color saturate-200 pointer-events-none" />
 							</motion.div>
 						);
 					}
