@@ -5,7 +5,7 @@ import Page from "@/components/page/Page";
 import Showcase from "@/ui/showcase/Showcase";
 import React, { useState } from "react";
 
-const page = () => {
+const ShowcasePage = () => {
 	const [showFullscreenImage, setShowFullscreenImage] =
 		useState<boolean>(false);
 	const [fullscreenImage, setFullscreenImage] = useState("");
@@ -34,4 +34,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default ShowcasePage;

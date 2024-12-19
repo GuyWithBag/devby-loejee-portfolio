@@ -116,6 +116,7 @@ const Showcase: React.FC<ShowcaseProps> = ({
 									className={`h-3 w-3  shadow-md bg-pipboyGreen rounded-full hover:bg-pipboyYellow transition-all hover:-translate-y-1 ${
 										carouselIndex == index ? "bg-pipboyDarkGreen" : ""
 									}`}
+									key={index}
 									onClick={() => {
 										setCarouselIndex(index);
 									}}

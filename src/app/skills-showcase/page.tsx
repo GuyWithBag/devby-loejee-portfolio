@@ -2,7 +2,7 @@ import Page from "@/components/page/Page";
 import SkillsShowcase from "@/components/skills-showcase/SkillsShowcase";
 import React from "react";
 
-const page = () => {
+const SkillsShowcasePage = () => {
 	return (
 		<div className="overflow-hidden">
 			<Page>
@@ -14,4 +14,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default SkillsShowcasePage;
