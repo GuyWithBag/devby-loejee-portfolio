@@ -12,7 +12,7 @@ const ImageFullscreenView: React.FC<ImageFullscreenViewProps> = ({
 }) => {
 	return (
 		<motion.div
-			className={`fixed top-0 left-0 w-screen h-screen pointer-events-none p-20 z-40 flex justify-center items-center ${
+			className={`fixed top-0 left-0 w-screen h-screen pointer-events-none max-sm:p-2 p-20 z-40 flex justify-center items-center ${
 				src === "" ? "hidden" : ""
 			} `}
 			animate={{ opacity: visible ? 100 : 0 }}
@@ -25,7 +25,7 @@ const ImageFullscreenView: React.FC<ImageFullscreenViewProps> = ({
 						width={1920}
 						height={1080}
 						objectFit="contain"
-						className="object-contain w-auto h-full max-h-[90vh] max-w-screen"
+						className="object-contain w-full h-full max-h-[90vh] max-w-screen"
 					/>
 				) : (
 					<></>
