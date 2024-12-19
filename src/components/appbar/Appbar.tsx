@@ -39,10 +39,10 @@ const Appbar = () => {
 	];
 
 	return (
-		<div className="w-full absolute z-20 bg-pipboyBackground">
+		<div className="w-full absolute z-20 bg-pipboyBackground max-sm:text-sm">
 			<AbsoluteBottomBorder width={"90%"} />
-			<div className="flex flex-row pt-10  px-24 max-md:px-10 justify-around items-stretch ">
-				<div className="flex-grow font-light ">Meet Loejee!</div>
+			<div className="flex flex-row max-md:flex-col max-sm:pt-4 pt-10  px-24 max-md:px-4 max-sm:gap-2 justify-around items-stretch ">
+				<div className="flex-grow font-extralight text-xs ">Meet Loejee!</div>
 				<div className=" flex flex-row justify-evenly flex-1 gap-4 ">
 					{/* <Link className={`${path === "/" ? "" : "hidden"}`} href={"/"}>
 					Home
@@ -51,7 +51,7 @@ const Appbar = () => {
 						return (
 							<div
 								key={index}
-								className={`relative ${
+								className={`relative max-sm:pb-2 ${
 									value.name === "Skills" ? "hidden max-md:block" : ""
 								}`}
 							>
