@@ -41,7 +41,7 @@ const Appbar = () => {
 	return (
 		<div className="w-full absolute z-20 bg-pipboyBackground">
 			<AbsoluteBottomBorder width={"90%"} />
-			<div className="flex flex-row pt-10  px-24 justify-around items-stretch ">
+			<div className="flex flex-row pt-10  px-24 max-md:px-10 justify-around items-stretch ">
 				<div className="flex-grow font-light ">Meet Loejee!</div>
 				<div className=" flex flex-row justify-evenly flex-1 gap-4 ">
 					{/* <Link className={`${path === "/" ? "" : "hidden"}`} href={"/"}>

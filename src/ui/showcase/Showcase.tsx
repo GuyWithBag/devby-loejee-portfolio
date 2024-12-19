@@ -27,7 +27,7 @@ const Showcase: React.FC<ShowcaseProps> = ({
 	};
 
 	return (
-		<div className="flex flex-row max-md:flex-col w-full min-h-screen justify-evenly max-md:justify-center max-md:gap-6 items-center px-24 max-md:px-20">
+		<div className="flex flex-row max-md:flex-col w-full min-h-screen justify-evenly max-md:justify-center max-md:gap-6 items-center px-24 max-md:px-20 max-sm:px-2">
 			<section className="relative flex-grow max-md:flex-grow-0 flex justify-center items-center gap-6  max-w-[50%] max-md:max-w-full flex-col  px-10 py-10 max-md:py-0">
 				<div className="h-full max-h-72 w-full max-w-[35rem] border-2 border-pipboyGreen overflow-hidden relative">
 					<motion.div
