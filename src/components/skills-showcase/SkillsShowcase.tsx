@@ -111,7 +111,7 @@ const SkillsShowcase = () => {
 		<div className="flex flex-col max-w-96 h-52 w-full gap-2 ">
 			<TabBar keys={keys} onChange={onTabBarChange} />
 			<div className="flex flex-wrap gap-4 mt-3">
-				{getSkills(currentKey.value ?? currentKey.name).map((value) => {
+				{getSkills(currentKey.value ?? currentKey.name).map((value, index) => {
 					// console.log("\n");
 					// console.log("PENISSSSSS\n\n");
 					// console.log(currentKey);
@@ -121,6 +121,7 @@ const SkillsShowcase = () => {
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								className="relative w-10 h-10 "
+								key={value.name}
 							>
 								{tooltipKey === value.name ? (
 									<Tooltip content={value.name} />

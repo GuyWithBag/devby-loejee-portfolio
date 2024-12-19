@@ -8,12 +8,13 @@ export const pages: ShowcasePage[] = [
 				<h3>SAMAHAN All for more</h3>
 				<p>
 					Under SAMAHAN Systems Development, we have developed and designed an
-					official page for Ateneo's all student organization SAMAHAN
+					official page for Ateneo&aposs all student organization SAMAHAN
 				</p>
 				<br />
 				<p>
-					Hosted and deployed in Ateneo De Davao's official servers and domain.
-					Fully featured full stack website created using NextJs and NestJS.
+					Hosted and deployed in Ateneo De Davao&aposs official servers and
+					domain. Fully featured full stack website created using NextJs and
+					NestJS.
 				</p>
 			</div>
 		),
@@ -33,7 +34,7 @@ export const pages: ShowcasePage[] = [
 				<h4>Summary: </h4>
 				<ul>
 					<li>
-						Win the game by capturing all the enemy's atoms / colors by
+						Win the game by capturing all the enemy&aposs atoms / colors by
 						expanding your army of atoms in a strategic way by overloading your
 						atoms. Which will start a chain reaction showing a colorful firework
 						display until it destroys your enemies!

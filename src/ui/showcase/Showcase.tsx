@@ -36,9 +36,12 @@ const Showcase: React.FC<ShowcaseProps> = ({
 							transform: `translateX(-${getTranslate()}%)`,
 						}}
 					>
-						{pages[tabIndex].images.map((value) => {
+						{pages[tabIndex].images.map((value, index) => {
 							return (
-								<div className="w-full flex-none flex justify-center items-center">
+								<div
+									key={index}
+									className="w-full flex-none flex justify-center items-center"
+								>
 									<Image
 										width={1000}
 										height={1000}

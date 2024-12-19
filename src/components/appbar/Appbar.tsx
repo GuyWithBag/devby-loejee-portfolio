@@ -21,7 +21,7 @@ const Appbar = () => {
 	const pathname = usePathname();
 	useEffect(() => {
 		setPath(pathname);
-	});
+	}, [pathname]);
 
 	const paths: Path[] = [
 		{
