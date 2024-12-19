@@ -5,12 +5,15 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 import ImageFullscreenView from "@/components/image-fullscreen-view/ImageFullscreenView";
+import Link from "next/link";
+import Tooltip from "@/components/tooltip/Tooltip";
 
 const Portrait = () => {
 	const [showFullscreenImage, setShowFullscreenImage] =
 		useState<boolean>(false);
 	const [fullscreenImage, setFullscreenImage] = useState("");
-
+	const [tooltipKey, setTooltipKey] = useState<string>("");
+	const email = "loejeemiguledulaugon@gmail.com";
 	const onImageHoverStart = (src: string) => {
 		setShowFullscreenImage(true);
 		setFullscreenImage(src);
@@ -46,17 +49,29 @@ const Portrait = () => {
 					very fast, game development and web development. With tools such as
 					Flutter, Godot Engine and Svelte
 				</p>
-				<a
+				<Link
 					className="self-center text-sm bg-pipboyGreen px-4 py-1 rounded-full text-pipboyBackground hover:text-pipboyBackground hover:bg-pipboyYellow text-center"
 					download
 					href="/LoejeeMiguel_Dulaugon_Resume.pdf"
 				>
 					Download Resume
-				</a>
+				</Link>
 				<div className="flex flex-wrap justify-evenly items-stretch ">
-					<FaLinkedin />
-					<FaGithub />
-					<MdEmail />
+					<Link href="https://www.linkedin.com/in/loejee-miguel-dulaugon-805480284/">
+						<FaLinkedin />
+					</Link>
+					<Link href="https://github.com/GuyWithBag/devby-loejee-portfolio">
+						<FaGithub />
+					</Link>
+					<button
+						onClick={() => navigator.clipboard.writeText(email)}
+						onMouseEnter={() => setTooltipKey(`Click to copy ${email}`)}
+						onMouseLeave={() => setTooltipKey("")}
+						className="relative flex"
+					>
+						{tooltipKey !== "" ? <Tooltip content={tooltipKey} /> : <div />}
+						<MdEmail />
+					</button>
 				</div>
 			</div>
 		</>
