@@ -6,7 +6,7 @@ const SkillsShowcasePage = () => {
 	return (
 		<div className="overflow-hidden">
 			<Page>
-				<div className="min-h-screen flex justify-center items-center p-10 max-sm:p-4">
+				<div className="min-h-screen flex justify-center items-center p-10 max-sm:p-0">
 					<SkillsShowcase />
 				</div>
 			</Page>

@@ -64,9 +64,11 @@ export const pages: ShowcasePage[] = [
 		content: (
 			<div>
 				<h3>Responsive E-Commerce Website With Functionalities</h3>
-				<p>
-					Created a functional E-Commerce website that looks and functions
-					similar to a real E-Commerce website.. <br />
+				<div>
+					<p>
+						Created a functional E-Commerce website that looks and functions
+						similar to a real E-Commerce website..{" "}
+					</p>
 					<br />
 					<h4>Features: </h4>
 					<ul>
@@ -77,10 +79,12 @@ export const pages: ShowcasePage[] = [
 							State management is stored in the URL so you can share it with
 							your friends!
 						</li>
+						<li>
+							You can share the link to that product with your friends! -
+							Animated banner
+						</li>
 					</ul>
-					<br />- You can share the link to that product with your friends! -
-					Animated banner
-				</p>
+				</div>
 			</div>
 		),
 		images: [
@@ -132,10 +136,12 @@ export const pages: ShowcasePage[] = [
 		content: (
 			<div>
 				<h3 slot="title">Morse Code Torch</h3>
-				<p slot="body">
-					A fun, useful app that you and your friends can use in order to
-					communicate to each other at night in long distances using your
-					flashlight. <br />
+				<div slot="body">
+					<p>
+						A fun, useful app that you and your friends can use in order to
+						communicate to each other at night in long distances using your
+						flashlight.
+					</p>
 					<br />
 					<h4>Features: </h4>
 					<ul className="!list-disc">
@@ -143,7 +149,7 @@ export const pages: ShowcasePage[] = [
 						<li>Change the duration of each unit </li>
 						<li>Morse-code to text, text to Morse-code </li>
 					</ul>
-				</p>
+				</div>
 			</div>
 		),
 		images: [
