@@ -115,22 +115,54 @@ const Showcase: React.FC<ShowcaseProps> = ({
 					</button>
 				</div>
 				{pages[tabIndex].images.length > 1 ? (
-					<div className="flex flex-row gap-2 left-1/2  z-10">
-						{pages[tabIndex].images.map((value, index) => {
-							return (
-								<button
-									className={`h-3 w-3  shadow-md  rounded-full hover:bg-pipboyYellow transition-all hover:-translate-y-1 ${
-										carouselIndex === index
-											? "bg-pipboyDarkGreen"
-											: "bg-pipboyGreen"
-									}`}
-									key={index}
-									onClick={() => {
-										setCarouselIndex(index);
-									}}
-								/>
-							);
-						})}
+					<div className="flex justify-center gap-4 w-full items-center">
+						<button
+							onClick={() => {
+								if (carouselIndex - 1 < 0) {
+									setCarouselIndex(pages[tabIndex].images.length - 1);
+									console.log(carouselIndex);
+									console.log("length: " + pages[tabIndex].images.length);
+									return;
+								}
+								setCarouselIndex(carouselIndex - 1);
+								console.log(carouselIndex);
+							}}
+						>
+							<FaCaretLeft />
+						</button>
+
+						<div className="flex flex-row gap-2 left-1/2  z-10">
+							{pages[tabIndex].images.map((value, index) => {
+								return (
+									<button
+										className={`h-3 w-3  shadow-md  rounded-full hover:bg-pipboyYellow transition-all hover:-translate-y-1 ${
+											carouselIndex === index
+												? "bg-pipboyDarkGreen"
+												: "bg-pipboyGreen"
+										}`}
+										key={index}
+										onClick={() => {
+											setCarouselIndex(index);
+										}}
+									/>
+								);
+							})}
+						</div>
+
+						<button
+							onClick={() => {
+								if (carouselIndex + 1 > pages[tabIndex].images.length - 1) {
+									setCarouselIndex(0);
+									console.log(carouselIndex);
+
+									return;
+								}
+								setCarouselIndex(carouselIndex + 1);
+								console.log(carouselIndex);
+							}}
+						>
+							<FaCaretRight />
+						</button>
 					</div>
 				) : (
 					<></>
