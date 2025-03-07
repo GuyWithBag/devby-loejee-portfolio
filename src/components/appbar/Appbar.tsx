@@ -36,6 +36,10 @@ const Appbar = () => {
 			name: "Skills",
 			path: "/skills-showcase",
 		},
+		{
+			name: "Contacts",
+			path: "/contact",
+		},
 	];
 
 	return (
