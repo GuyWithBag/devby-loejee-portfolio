@@ -33,11 +33,11 @@ const Portrait = () => {
 					alt="Profile Picture"
 					height={600}
 					width={600}
-					src={"/images/profile_pic.jpg"}
+					src={"/images/profile_pic_no_tats.png"}
 					className=" object-cover border-2 border-pipboyGreen max-h-72 max-w-72 self-center "
 					onMouseOver={() => {
 						setShowFullscreenImage(true);
-						setFullscreenImage("/images/profile_pic.jpg");
+						setFullscreenImage("/images/profile_pic_no_tats.png");
 					}}
 					onMouseOut={() => {
 						setShowFullscreenImage(false);
